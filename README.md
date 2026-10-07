@@ -1,6 +1,6 @@
 # VisCADNext
 
-VisCADNext provides Excel-hosted engineering tools and a desktop installation manager, developed by T. Pendlebury. This repository contains public distribution documentation and approved release assets. Application source is maintained privately.
+VisCADNext provides Excel-hosted engineering tools and a desktop installation manager. This repository contains public distribution documentation and approved release assets. The source repository is private. Download the Setup EXE from the latest stable release below.
 
 > VisCADNext is an independent, unofficial third-party tool developed in a personal capacity. It is not an official Siemens product and is not affiliated with, sponsored, endorsed or supported by Siemens AG or any other vendor or manufacturer. To the extent permitted by applicable law, the software is provided "as is", without warranty of any kind, express or implied. No ongoing support, updates or maintenance are promised. Use of the tool is at the user's own risk. Users should maintain appropriate project backups and independently review and validate all outputs and changes before applying them.
 
