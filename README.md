@@ -15,3 +15,5 @@ The Excel ribbon includes **About** and **Updates**. **Check for updates**, **Do
 User data stays outside the installation: an existing `C:\VisCadNext` layout is honoured; new users use `%LocalAppData%\VisCADNext`. Upgrades and uninstall must preserve catalogues, projects, workbooks and preferences. Back up user data before upgrading. The legacy VBA project template is not included; import an existing workbook through the established VisCADNext workflow.
 
 When moving from a beta, the manager detects a VisCADNext XLL registered at another location and blocks registration. In Excel, open **File → Options → Add-ins → Manage: Excel Add-ins → Go**, clear the old VisCADNext entry, then close Excel normally and use **Register / repair Excel add-in** again. The installer does not remove or replace another add-in registration automatically.
+
+Before uninstalling, close Excel normally and use **Unregister this add-in** in the VisCADNext manager, following any manual Excel instructions it displays. Then uninstall VisCADNext through Windows **Installed apps**. Your catalogue, templates, workbooks and other user data remain outside the installation directory.
