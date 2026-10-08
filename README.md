@@ -1,29 +1,64 @@
-# VisCADNext
+# VisCADNext — Releases
 
-VisCADNext provides an Excel-hosted engineering tool and a desktop installation manager. This repository contains public distribution documentation and approved release assets. The source repository is private. Download the Setup EXE from the latest stable release below.
+Windows installers and the stable update feed for VisCADNext, an Excel-hosted engineering tool. Application source is maintained in a separate private repository.
 
 > VisCADNext is an independent, unofficial third-party tool developed in a personal capacity. It is not an official Siemens product and is not affiliated with, sponsored, endorsed or supported by Siemens AG or any other vendor or manufacturer. To the extent permitted by applicable law, the software is provided "as is", without warranty of any kind, express or implied. No ongoing support, updates or maintenance are promised. Use of the tool is at the user's own risk. Users should maintain appropriate project backups and independently review and validate all outputs and changes before applying them.
 
-The signed **1.1.10** official release is available, completing the initial official rollout and incorporating the fixes and improvements identified during beta testing. Application source, assets and dependencies match **1.1.9**. Public downloads and anonymous update discovery have been verified.
+## Download and install
 
-The owner's normal installation, update and Office passes were on 1.1.9; the exact 1.1.10 flows have not been separately manually retested. Some failure and edge cases remain unqualified.
+The current stable release is [VisCADNext 1.1.10](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.10).
 
-Install [1.1.10 Setup](https://github.com/timpendlebury/VisCad.Next-Releases/releases/download/v1.1.10/VisCADNextDesktop-stable-Setup.exe) after reviewing [certificate guidance](CODE_SIGNING.md). Downloads and update checks need no GitHub account or token.
+1. Download the [signed Windows x64 installer](https://github.com/timpendlebury/VisCad.Next-Releases/releases/latest/download/VisCADNextDesktop-stable-Setup.exe) and review the [certificate guidance](CODE_SIGNING.md).
+2. Save your work, back up project files, and close Excel, Visio and VisCADNext before running Setup.
+3. Open the installed **VisCADNext** shortcut, select **Register / repair Excel add-in**, then reopen Excel.
 
-Requires Windows x64, 64-bit Microsoft Excel, and the x64 .NET 10 Desktop Runtime for the Excel add-in. The desktop manager includes its own .NET runtime. Install the Desktop Runtime from [Microsoft](https://dotnet.microsoft.com/en-us/download/dotnet/10.0); the manager reports whether it is available. Microsoft Visio and Siemens ABT products remain external prerequisites for features that use them.
+Downloads and update checks do not require a GitHub account.
 
-The installer bundles signed `VisCad.Next.x64.xll` and `VisCad.Next.x86.xll` in `%LocalAppData%\VisCADNextDesktop\current\AddIn`, and application updates preserve both. The manager remains Windows x64 and automatically registers the 64-bit Excel add-in. Separate 32-bit Excel qualification for the bundled x86 add-in remains pending.
+<details>
+<summary>Manual registration, beta upgrades and uninstalling</summary>
 
-Save your work and close Excel, Visio and VisCADNext normally before installation or upgrade. Open the installed **VisCADNext** shortcut and use **Register / repair Excel add-in**. The manager checks Excel architecture, runtime and running sessions before updating only this add-in's registration. Registration is an explicit user action. If automatic registration is unavailable, use Excel **File → Options → Add-ins → Manage: Excel Add-ins → Go → Browse**, then select `%LocalAppData%\VisCADNextDesktop\current\AddIn\VisCad.Next.x64.xll`. Enterprise policy may require your IT team to permit the add-in.
+- **Manual registration:** In Excel, open **File → Options → Add-ins → Manage: Excel Add-ins → Go → Browse** and select `%LocalAppData%\VisCADNextDesktop\current\AddIn\VisCad.Next.x64.xll`. Managed PCs may require IT approval.
+- **Moving from beta:** Clear the old VisCADNext entry in Excel's Add-ins dialog, close Excel, then use **Register / repair Excel add-in**. Legacy data is not imported automatically.
+- **Uninstalling:** Close Excel, select **Unregister this add-in** in the manager and follow any manual Excel instructions it displays, then uninstall through Windows **Installed apps**. User data is preserved.
 
-The Excel ribbon includes **About** and **Updates**. Updates are checked automatically when the registered add-in loads, normally once per Excel session, and when the VisCADNext manager opens. Opening another workbook in the same Excel session does not trigger another check. Checks do not automatically download or install updates. **Check for updates**, **Download update**, cancellation, **Later**, release notes and **Open Setup installer page** are available. Offline failures do not block Excel work.
+</details>
 
-After a verified download, **Restart and Update** waits for applications to close normally. Choosing it in Excel opens the VisCADNext manager for explicit confirmation and leaves Excel open. Save your work and close Excel, Visio and other VisCADNext windows normally; their Save/Discard/Cancel choices keep their usual meaning. Active engineering operations, another running instance or busy files postpone the update. VisCADNext never force-closes applications. **Later** keeps the downloaded update for another time, and Setup remains available as a fallback. Do not reopen applications while an upgrade is being applied. Signed-package and installed update checks, followed by the owner's Office testing, informed approval of release 1.1.9; that manual evidence is carried forward for the version and release notes update in 1.1.10.
+## Prerequisites
 
-The official catalogue belongs to the release owner and is read directly from `%LocalAppData%\VisCADNextDesktop\current\Assets\VisCadCatalogue.db`. Each installer upgrade replaces it with the database supplied by that release. Excel reads the catalogue without editing it, and CatalogueEditor is excluded from the official distribution. Catalogue corrections should be sent to the owner for inclusion in a future release.
+- Windows x64 and **64-bit Microsoft Excel**.
+- [x64 .NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) for the Excel add-in.
+- Microsoft Visio for drawing output.
+- Siemens ABT products for features that use them.
 
-Templates and workbooks use `%LocalAppData%\VisCADNext`, outside the installation. Installed copies ignore the old `C:\VisCadNext` beta folder, all `VISCAD_*` data-path environment variables and stale local catalogue copies. The installer includes the owner-approved `VisCad Project Template.xlsm`; application/add-in startup copies it to `%LocalAppData%\VisCADNext\Workbook\VisCad Project Template.xlsm` only when that file is missing. Legacy data is not imported automatically. Only `Visio\VisCad.vssx` and `Visio\VisCad_User.vssx` are refreshed from the installed release when their contents differ. Put custom stencils under additional `.vssx` filenames in that `Visio` folder; upgrades never overwrite or remove those additional files. Workbook and template edits are preserved, and uninstall leaves the data folder intact. Back up user data before upgrading. Other workbooks and customer/project data are not distributed; import an existing workbook explicitly through the established VisCADNext workflow when required.
+These products are installed separately. The VisCADNext desktop manager includes its own .NET runtime. Separate 32-bit Excel qualification remains pending.
 
-When moving from a beta, the manager detects a VisCADNext XLL registered at another location and blocks registration. In Excel, open **File → Options → Add-ins → Manage: Excel Add-ins → Go**, clear the old VisCADNext entry, then close Excel normally and use **Register / repair Excel add-in** again. The installer does not remove or replace another add-in registration automatically.
+## Updates
 
-Before uninstalling, close Excel normally and use **Unregister this add-in** in the VisCADNext manager, following any manual Excel instructions it displays. Then uninstall VisCADNext through Windows **Installed apps**. Your templates, workbooks and other user data remain outside the installation directory; the release catalogue is part of the removed installation.
+Open **VisCADNext → Updates** in Excel or use the desktop manager. Update checks run automatically; downloads and installation require your action.
+
+Choose **Download update**, then **Restart and Update** in the manager. Save your work and close Excel, Visio and VisCADNext normally. Busy files or active operations postpone the update; applications are never force-closed. Do not reopen applications while the upgrade is being applied. **Later** defers installation, and the Setup installer is also available.
+
+<details>
+<summary>Release validation</summary>
+
+Version 1.1.10 has the same application source, assets and dependencies as 1.1.9. Manual installation, update and Office results are carried forward from 1.1.9; exact 1.1.10 flows have not been separately retested, and some edge cases remain unqualified. See the [release notes](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.10).
+
+</details>
+
+## Repository contents
+
+This repository holds public distribution documentation, Windows installers and update feeds. It does not contain application source, customer project files, user settings or publication credentials. The `.nupkg` and `releases.stable.json` assets support application updates.
+
+<details>
+<summary>Project files, templates and catalogue</summary>
+
+- **User data:** Templates and workbooks are stored in `%LocalAppData%\VisCADNext` and preserved during upgrades and uninstall. Back up this folder before upgrading.
+- **Template:** Startup creates `Workbook\VisCad Project Template.xlsm` only when missing, preserving existing edits. The old `C:\VisCadNext` beta folder and `VISCAD_*` data-path overrides are ignored.
+- **Visio stencils:** Release-owned `VisCad.vssx` and `VisCad_User.vssx` are refreshed during upgrades. Keep custom stencils under other `.vssx` filenames in the user-data `Visio` folder.
+- **Catalogue:** Excel reads the release catalogue without editing it; upgrades replace it. CatalogueEditor is excluded from official installers. Send catalogue corrections to the release owner.
+
+</details>
+
+## Signed installer verification
+
+VisCADNext uses the T. Pendlebury code-signing identity. Read the [verification and optional trust instructions](CODE_SIGNING.md), download the [public certificate](T-Pendlebury-code-signing.cer), and check its [SHA-256 fingerprint](CERTIFICATE-SHA256SUMS). In-app updates require Windows to trust this publisher certificate.
