@@ -10,14 +10,14 @@ The current stable release is [VisCADNext 1.1.10](https://github.com/timpendlebu
 
 1. Download the [signed Windows x64 installer](https://github.com/timpendlebury/VisCad.Next-Releases/releases/latest/download/VisCADNextDesktop-stable-Setup.exe) and review the [certificate guidance](CODE_SIGNING.md).
 2. Save your work, back up project files, and close Excel, Visio and VisCADNext before running Setup.
-3. Open the installed **VisCADNext** shortcut, select **Register / repair Excel add-in**, then reopen Excel.
+3. For 64-bit Excel, open the installed **VisCADNext** shortcut, select **Register / repair Excel add-in**, then reopen Excel. For 32-bit Excel, use the manual registration instructions below.
 
 Downloads and update checks do not require a GitHub account.
 
 <details>
 <summary>Manual registration, beta upgrades and uninstalling</summary>
 
-- **Manual registration:** In Excel, open **File → Options → Add-ins → Manage: Excel Add-ins → Go → Browse** and select `%LocalAppData%\VisCADNextDesktop\current\AddIn\VisCad.Next.x64.xll`. Managed PCs may require IT approval.
+- **Manual registration:** In Excel, open **File → Options → Add-ins → Manage: Excel Add-ins → Go → Browse**. From `%LocalAppData%\VisCADNextDesktop\current\AddIn`, select `VisCad.Next.x64.xll` for 64-bit Excel or `VisCad.Next.x86.xll` for 32-bit Excel. Managed PCs may require IT approval.
 - **Moving from beta:** Clear the old VisCADNext entry in Excel's Add-ins dialog, close Excel, then use **Register / repair Excel add-in**. Legacy data is not imported automatically.
 - **Uninstalling:** Close Excel, select **Unregister this add-in** in the manager and follow any manual Excel instructions it displays, then uninstall through Windows **Installed apps**. User data is preserved.
 
@@ -25,12 +25,15 @@ Downloads and update checks do not require a GitHub account.
 
 ## Prerequisites
 
-- Windows x64 and **64-bit Microsoft Excel**.
-- [x64 .NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) for the Excel add-in.
+- Windows x64.
+- Microsoft Excel: **64-bit is preferred and the default; 32-bit is also supported**.
+- [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) matching Excel's bitness: **x64** for 64-bit Excel or **x86** for 32-bit Excel.
 - Microsoft Visio for drawing output.
 - Siemens ABT products for features that use them.
 
-These products are installed separately. The VisCADNext desktop manager includes its own .NET runtime. Separate 32-bit Excel qualification remains pending.
+Both 64-bit and 32-bit Excel add-ins are included in the release build. The manager registers the 64-bit add-in by default; 32-bit Excel uses manual registration.
+
+These products are installed separately. The VisCADNext desktop manager includes its own .NET runtime.
 
 ## Updates
 
