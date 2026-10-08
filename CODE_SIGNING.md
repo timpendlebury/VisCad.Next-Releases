@@ -64,6 +64,16 @@ certificate for this Authenticode EXE distribution. It does not install a
 general-purpose CA or assert that Microsoft or Siemens reviewed the software.
 If you decline this trust choice, do not import the certificate.
 
+In-app updates also require Windows to trust this publisher certificate for the
+account running VisCADNext. Allowing Setup to run through a Windows warning
+does not install certificate trust. If an update reaches 100% and reports an
+Authenticode verification failure, file transfer has finished but verification
+has failed, so **Restart and Update** stays unavailable. For an untrusted-root
+error, verify the exact fingerprint above and follow the trust steps under the
+affected Windows account if you choose to trust this publisher, then retry
+**Download update**. Other signature or integrity errors require investigation.
+Managed PCs may require IT to establish publisher trust.
+
 Finish your VisCADNext and Office work and close the application before running a newer
 Setup installer. Version checks and the release download link are under
 the Excel **VisCADNext → Updates** ribbon control and the desktop manager.
