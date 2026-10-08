@@ -39,6 +39,8 @@ These products are installed separately. The VisCADNext desktop manager includes
 
 Open **VisCADNext → Updates** in Excel or use the desktop manager. Update checks run automatically; downloads and installation require your action.
 
+**Certificate trust is required for semi-automatic updates through VisCADNext.** Update checks and downloads can run without it, but verification fails and **Restart and Update** remains unavailable. Running Setup through a Windows warning does not establish trust. Follow the [certificate verification and trust instructions](CODE_SIGNING.md) for the Windows account running VisCADNext, then retry **Download update**.
+
 Choose **Download update**, then **Restart and Update** in the manager. Save your work and close Excel, Visio and VisCADNext normally. Busy files or active operations postpone the update; applications are never force-closed. Do not reopen applications while the upgrade is being applied. **Later** defers installation, and the Setup installer is also available.
 
 <details>
@@ -64,4 +66,4 @@ This repository holds public distribution documentation, Windows installers and 
 
 ## Signed installer verification
 
-VisCADNext uses the T. Pendlebury code-signing identity. Read the [verification and optional trust instructions](CODE_SIGNING.md), download the [public certificate](T-Pendlebury-code-signing.cer), and check its [SHA-256 fingerprint](CERTIFICATE-SHA256SUMS). In-app updates require Windows to trust this publisher certificate.
+VisCADNext uses a self-signed code-signing identity. Read the [verification and optional trust instructions](CODE_SIGNING.md), download the [public certificate](T-Pendlebury-code-signing.cer), and check its [SHA-256 fingerprint](CERTIFICATE-SHA256SUMS). In-app updates require Windows to trust this publisher certificate.
