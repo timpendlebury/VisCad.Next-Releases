@@ -4,9 +4,9 @@ VisCADNext provides Excel-hosted engineering tools and a desktop installation ma
 
 > VisCADNext is an independent, unofficial third-party tool developed in a personal capacity. It is not an official Siemens product and is not affiliated with, sponsored, endorsed or supported by Siemens AG or any other vendor or manufacturer. To the extent permitted by applicable law, the software is provided "as is", without warranty of any kind, express or implied. No ongoing support, updates or maintenance are promised. Use of the tool is at the user's own risk. Users should maintain appropriate project backups and independently review and validate all outputs and changes before applying them.
 
-The owner has approved the signed **1.1.9** official release after normal installation, update and Office testing. Some failure and edge cases remain unqualified. Asset publication and final public-download verification are pending.
+The signed **1.1.9** official release is available following owner approval after normal installation, update and Office testing. Public downloads and anonymous update discovery have been verified. Some failure and edge cases remain unqualified.
 
-Once publication is verified, install the [1.1.9 Setup](https://github.com/timpendlebury/VisCad.Next-Releases/releases/download/v1.1.9/VisCADNextDesktop-stable-Setup.exe) after reviewing [certificate guidance](CODE_SIGNING.md). Downloads and update checks need no GitHub account or token.
+Install the [1.1.9 Setup](https://github.com/timpendlebury/VisCad.Next-Releases/releases/download/v1.1.9/VisCADNextDesktop-stable-Setup.exe) after reviewing [certificate guidance](CODE_SIGNING.md). Downloads and update checks need no GitHub account or token.
 
 Requires Windows x64, 64-bit Microsoft Excel, and the x64 .NET 10 Desktop Runtime for the Excel add-in. The desktop manager includes its own .NET runtime. Install the Desktop Runtime from [Microsoft](https://dotnet.microsoft.com/en-us/download/dotnet/10.0); the manager reports whether it is available. Microsoft Visio and Siemens ABT products remain external prerequisites for features that use them.
 
