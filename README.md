@@ -6,7 +6,9 @@ Windows installers and the stable update feed for VisCADNext, an Excel-hosted en
 
 ## Download and install
 
-The current stable release is [VisCADNext 1.1.11](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.11).
+The current stable release is [VisCADNext 1.1.12](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.12).
+
+This release removes installation-note defaults from the new Siemens room sensors and restores their saved PointConfig selections, including equivalent QPA2360 choices and current-output signals. PointConfig still asks you to choose when saved values match different sensor configurations.
 
 1. Download the [signed Windows x64 installer](https://github.com/timpendlebury/VisCad.Next-Releases/releases/latest/download/VisCADNextDesktop-stable-Setup.exe) and review the [certificate guidance](CODE_SIGNING.md).
 2. Save your work, back up project files, and close Excel, Visio and VisCADNext before running Setup.
@@ -46,7 +48,9 @@ Choose **Download update**, then **Restart and Update** in the manager. Save you
 <details>
 <summary>Release validation</summary>
 
-The release owner reports that normal installation, update and Excel/Visio use passed for 1.1.11 on a Windows PC with 64-bit Excel. Signed-package verification, automated build tests, disposable Windows fresh-install checks and controlled download/update checks passed for this exact release candidate. Anonymous public installer and update-feed downloads were also verified. Some failure and edge cases remain unqualified, and separate 32-bit Excel qualification remains pending. See the [release notes](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.11).
+The release owner confirmed the sensor fixes using the unsigned local 1.1.12 test installer. The public signed candidate has equivalent application and catalogue inputs; its signing and package verification are separate from those local tests.
+
+Normal installation, update and Excel/Visio use were previously reported as passed for signed 1.1.11 on a Windows PC with 64-bit Excel. The installer and update implementation is unchanged in 1.1.12. Those earlier passes are carried forward; a separate owner test of the exact signed 1.1.12 installer, update and Office flows has not been reported. Some failure and edge cases remain unqualified, and separate 32-bit Excel qualification remains pending. See the [release notes](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.1.12) for this release's validation scope.
 
 </details>
 
