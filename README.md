@@ -6,9 +6,9 @@ Windows installers and the stable update feed for VisCADNext, an Excel-hosted en
 
 ## Download and install
 
-The current stable release is [VisCADNext 1.2.4](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.2.4).
+The current stable release is [VisCADNext 1.2.5](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.2.5). Its release notes bring together the v1.2.x changes since v1.1.12.
 
-Excel ribbon commands stay in sync as you switch workbook windows or sheets, change the selection or edit cells. The ribbon shares one workbook read per refresh.
+PointConfig supports combined sensor entry, catalogue Device Type defaults and custom analogue input scaling. Excel ribbon commands stay in sync as you switch windows or sheets, change the selection or edit cells. The ribbon shares one workbook read per refresh and reuses smaller icons.
 
 1. Download the [signed Windows x64 installer](https://github.com/timpendlebury/VisCad.Next-Releases/releases/latest/download/VisCADNextDesktop-stable-Setup.exe) and review the [certificate guidance](CODE_SIGNING.md).
 2. Save your work, back up project files, and close Excel, Visio and VisCADNext before running Setup.
@@ -48,7 +48,7 @@ Choose **Download update**, then **Restart and Update** in the manager. Save you
 <details>
 <summary>Release validation</summary>
 
-Automated build, test and signed-package verification passed for v1.2.4. The release owner reported that the installer worked in a manual check and approved publication as a one-time exception. Setup upgrade, Excel and in-app update testing remain pending.
+Automated build, test and signed-package verification passed for v1.2.5. The release owner approved publication after testing a clean install, a Setup upgrade from v1.2.4, and PointConfig and the ribbon in installed Excel. In-app update testing and complete installed qualification remain pending.
 
 </details>
 
