@@ -6,7 +6,9 @@ Windows installers and the stable update feed for VisCADNext, an Excel-hosted en
 
 ## Download and install
 
-The current stable release is [VisCADNext 1.2.5](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.2.5). Its release notes bring together the v1.2.x changes since v1.1.12.
+The current stable release is [VisCADNext 1.2.9](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.2.9).
+
+Both 24Vac triac switch choices now leave **Power note** blank by default. Auto Address refreshes default field wiring when a point moves between compact onboard I/O and TXM.
 
 PointConfig supports combined sensor entry, catalogue Device Type defaults and custom analogue input scaling. Excel ribbon commands stay in sync as you switch windows or sheets, change the selection or edit cells. The ribbon shares one workbook read per refresh and reuses smaller icons.
 
@@ -48,7 +50,7 @@ Choose **Download update**, then **Restart and Update** in the manager. Save you
 <details>
 <summary>Release validation</summary>
 
-Automated build, test and signed-package verification passed for v1.2.5. The release owner approved publication after testing a clean install, a Setup upgrade from v1.2.4, and PointConfig and the ribbon in installed Excel. In-app update testing and complete installed qualification remain pending.
+Automated build, tests and signed-package verification passed for v1.2.9. The release owner reported a successful clean install and Setup upgrade from v1.2.8, blank Power notes for both triac choices in installed Excel, and correct drawing output in Visio. The owner approved publication. In-app update testing and complete installed qualification remain pending.
 
 </details>
 
