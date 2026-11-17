@@ -6,9 +6,9 @@ Windows installers and the stable update feed for VisCADNext, an Excel-hosted en
 
 ## Download and install
 
-The current stable release is [VisCADNext 1.2.9](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.2.9).
+The current stable release is [VisCADNext 1.3.1](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.3.1).
 
-Both 24Vac triac switch choices now leave **Power note** blank by default. Auto Address refreshes default field wiring when a point moves between compact onboard I/O and TXM.
+Activate one company catalogue in **Catalogue Editor → Use in VisCADNext**. Excel combines its devices, wiring, branch details and logo with the built-in catalogue for every workbook. PointConfig shows company devices by model or device name, with the company name in brackets. Compatible company relay and Triac choices appear alongside the built-in choices.
 
 PointConfig supports combined sensor entry, catalogue Device Type defaults and custom analogue input scaling. Excel ribbon commands stay in sync as you switch windows or sheets, change the selection or edit cells. The ribbon shares one workbook read per refresh and reuses smaller icons.
 
@@ -50,7 +50,9 @@ Choose **Download update**, then **Restart and Update** in the manager. Save you
 <details>
 <summary>Release validation</summary>
 
-Automated build, tests and signed-package verification passed for v1.2.9. The release owner reported a successful clean install and Setup upgrade from v1.2.8, blank Power notes for both triac choices in installed Excel, and correct drawing output in Visio. The owner approved publication. In-app update testing and complete installed qualification remain pending.
+VisCADNext v1.3.1 uses the same application code and packaged assets as v1.2.11, with updated version metadata and release notes. Automated build, tests and signed-package verification passed for v1.3.1.
+
+The release owner reported a successful Setup upgrade from v1.2.10 to v1.2.11 with the company catalogue active. This manual evidence carries forward to v1.3.1. Earlier v1.2.9 testing covered a clean install, a Setup upgrade from v1.2.8, Excel use and drawing output in Visio. Manual testing of the exact v1.3.1 build, in-app update testing and complete installed qualification remain pending.
 
 </details>
 
@@ -64,7 +66,7 @@ This repository holds public distribution documentation, Windows installers and 
 - **User data:** Templates and workbooks are stored in `%LocalAppData%\VisCADNext` and preserved during upgrades and uninstall. Back up this folder before upgrading.
 - **Template:** Startup creates `Workbook\VisCad Project Template.xlsm` only when missing, preserving existing edits. The old `C:\VisCadNext` beta folder and `VISCAD_*` data-path overrides are ignored.
 - **Visio stencils:** Release-owned `VisCad.vssx` and `VisCad_User.vssx` are refreshed during upgrades. Keep custom stencils under other `.vssx` filenames in the user-data `Visio` folder.
-- **Catalogue:** Excel reads the release catalogue without editing it; upgrades replace it. CatalogueEditor is excluded from official installers. Send catalogue corrections to the release owner.
+- **Catalogue** — Use **Catalogue Editor** to view the built-in catalogue or maintain company branches, logos and hardwired ABT devices. Choose **Use in VisCADNext** in the editor to activate an optional company file. Excel loads its entries alongside the built-in entries automatically, and the company file survives upgrades.
 
 </details>
 
