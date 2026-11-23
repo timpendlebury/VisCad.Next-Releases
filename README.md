@@ -6,7 +6,9 @@ Windows installers and the stable update feed for VisCADNext, an Excel-hosted en
 
 ## Download and install
 
-The current stable release is [VisCADNext 1.3.1](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.3.1).
+The current stable release is [VisCADNext 1.4.1](https://github.com/timpendlebury/VisCad.Next-Releases/releases/tag/v1.4.1).
+
+PointConfig can add a supported damper command and its feedback together. When feedback is enabled, analogue commands add position feedback and digital commands add Closed and Opened status inputs. Use **Save Project Defaults** to remember the feedback choice. PointConfig, Auto Address and Draw support four-wire Pt100 sensors on TXM1.8P.
 
 Activate one company catalogue in **Catalogue Editor → Use in VisCADNext**. Excel combines its devices, wiring, branch details and logo with the built-in catalogue for every workbook. PointConfig shows company devices by model or device name, with the company name in brackets. Compatible company relay and Triac choices appear alongside the built-in choices.
 
@@ -50,9 +52,9 @@ Choose **Download update**, then **Restart and Update** in the manager. Save you
 <details>
 <summary>Release validation</summary>
 
-VisCADNext v1.3.1 uses the same application code and packaged assets as v1.2.11, with updated version metadata and release notes. Automated build, tests and signed-package verification passed for v1.3.1.
+The release owner reported that the local unsigned v1.4.1 test installer worked and approved publication. The signed build passed automated tests and signature verification.
 
-The release owner reported a successful Setup upgrade from v1.2.10 to v1.2.11 with the company catalogue active. This manual evidence carries forward to v1.3.1. Earlier v1.2.9 testing covered a clean install, a Setup upgrade from v1.2.8, Excel use and drawing output in Visio. Manual testing of the exact v1.3.1 build, in-app update testing and complete installed qualification remain pending.
+Validation of the shared deployment path draws on the v1.2.9 clean installation and Excel and Visio tests, and the successful Setup upgrade from v1.2.10 to v1.2.11 with the company catalogue active. Manual testing of the exact signed v1.4.1 build, in-app update testing and complete installed qualification remain pending.
 
 </details>
 
